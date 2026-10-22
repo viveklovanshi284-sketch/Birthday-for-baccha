@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ff6f9f">
+<title>For My Baccha 💗</title>
+<style>
+:root{--pink:#ff5e96;--deep:#b72b63;--pale:#fff0f6;--ink:#642443}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:var(--ink);background:linear-gradient(160deg,#fff7fb,#ffe0ec 55%,#fff2f8);overflow-x:hidden}
+button{font:inherit;cursor:pointer}.hero{min-height:100svh;display:grid;place-items:center;text-align:center;padding:28px 18px;position:relative;overflow:hidden}
+.glow{position:absolute;width:260px;height:260px;border-radius:50%;filter:blur(65px);opacity:.42;background:#ff80b2;top:12%;left:-90px}
+.glow.two{top:auto;left:auto;right:-90px;bottom:10%;background:#ffc0d8}
+.hero-content{position:relative;z-index:1;max-width:720px}
+.eyebrow{letter-spacing:.18em;text-transform:uppercase;font-size:.76rem;font-weight:800;color:#c64b7c}
+h1{font-family:Georgia,serif;font-size:clamp(3rem,12vw,6.6rem);line-height:.98;margin:16px 0;color:#b72b63}
+h1 span{color:#ff5e96;font-style:italic}.subtitle{font-size:clamp(1rem,3.5vw,1.22rem);max-width:540px;margin:18px auto 26px;line-height:1.7}
+.btn{border:0;border-radius:999px;padding:13px 22px;background:linear-gradient(135deg,#ff75a7,#e93e82);color:white;font-weight:800;box-shadow:0 10px 24px #d9427b35;transition:transform .2s}
+.btn:active{transform:scale(.97)}.btn.secondary{background:white;color:#b72b63;border:1px solid #ffc0d8;box-shadow:none}
+.hero-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.scroll{margin-top:32px;font-size:.85rem;opacity:.7}
+section{padding:70px 18px;max-width:980px;margin:auto}.section-title{text-align:center;font-family:Georgia,serif;font-size:clamp(2rem,7vw,3.2rem);margin:0 0 12px;color:#b72b63}
+.section-sub{text-align:center;line-height:1.7;margin:0 auto 30px;max-width:580px}
+.card{background:#ffffffc9;border:1px solid #ffd0e1;border-radius:26px;padding:clamp(22px,5vw,38px);box-shadow:0 18px 55px #b72b6310}
+.birthday-card{text-align:center;max-width:700px;margin:auto;position:relative;overflow:hidden}
+.cake{font-size:5rem;display:block;filter:drop-shadow(0 8px 12px #e95a9430);animation:bob 3s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-9px) rotate(2deg)}}
+.message{font-family:Georgia,serif;font-size:clamp(1.3rem,5vw,2rem);line-height:1.55;margin:16px 0}
+.small{font-size:.92rem;line-height:1.8}.timer{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;max-width:570px;margin:22px auto 0}
+.timebox{background:white;border:1px solid #ffd0e1;border-radius:17px;padding:15px 5px}.timebox strong{display:block;font-size:clamp(1.5rem,5vw,2.2rem);color:#d83f7c}.timebox span{font-size:.74rem;letter-spacing:.06em;text-transform:uppercase}
+.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.photo{min-height:165px;border-radius:22px;background:linear-gradient(135deg,#ffd6e5,#fff1f7);border:1px dashed #e98db1;display:flex;align-items:center;justify-content:center;text-align:center;padding:15px;position:relative;overflow:hidden}
+.photo img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover}.photo .placeholder{z-index:1;font-size:.9rem;line-height:1.5;background:#fff8fbdc;padding:10px 13px;border-radius:13px}
+.photo input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer;z-index:2}
+.letter{max-width:720px;margin:auto;line-height:1.95;white-space:pre-line;font-size:1.02rem}.letter .sign{font-family:Georgia,serif;font-size:1.6rem;color:#c23670;margin-top:20px}
+footer{text-align:center;padding:30px 18px 45px;color:#9b4b6e;font-size:.9rem}
+.heart{position:fixed;bottom:-40px;z-index:9;pointer-events:none;animation:floatUp 4.5s linear forwards}
+@keyframes floatUp{to{transform:translateY(-115vh) rotate(25deg);opacity:0}}
+.confetti{position:fixed;top:-15px;width:9px;height:13px;z-index:20;pointer-events:none;animation:fall 3s linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:.2}}
+.hidden{display:none!important}
+@media(min-width:650px){.gallery{grid-template-columns:repeat(3,minmax(0,1fr))}.photo{min-height:220px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header class="hero" id="home">
+  <div class="glow"></div><div class="glow two"></div>
+  <div class="hero-content">
+    <div class="eyebrow">A little surprise, made with love</div>
+    <h1>Happy Birthday,<br><span>My Baccha</span> 💗</h1>
+    <p class="subtitle">Aaj ka din utna hi beautiful ho jitni tum meri life ko banati ho. This little corner of the internet is only for you. 🎀</p>
+    <div class="hero-actions">
+      <button class="btn" onclick="openSurprise()">Open Your Surprise 💌</button>
+      <button class="btn secondary" onclick="toggleMusic()" id="musicBtn">Play our music ♫</button>
+    </div>
+    <div class="scroll">Made just for you · with all my love ↓</div>
+  </div>
+</header>
+<main>
+<section id="card-section">
+  <h2 class="section-title">A card for my favourite person</h2>
+  <p class="section-sub">A tiny card, but a whole lot of love inside it.</p>
+  <div class="card birthday-card">
+    <span class="cake">🎂</span>
+    <div class="eyebrow">Today is all about you</div>
+    <p class="message">Happy Birthday, Baccha! 💕<br>Keep smiling, keep shining.</p>
+    <p class="small">May your days be full of little joys, warm hugs, big dreams and the kind of happiness you deserve every single day. I hope this year brings you a thousand reasons to smile.</p>
+    <button class="btn" onclick="celebrate()">Make a wish ✨</button>
+  </div>
+</section>
+<section id="countdown">
+  <h2 class="section-title">Counting down to your day ⏳</h2>
+  <p class="section-sub">Set your birthday date below and this timer will count down to it. If today is your birthday, it will celebrate today!</p>
+  <div class="card" style="text-align:center">
+    <label for="birthdayDate" class="small">Your birthday date</label><br>
+    <input id="birthdayDate" type="date" style="margin:12px 0;padding:10px;border-radius:12px;border:1px solid #f1a5c3;background:white;color:#642443">
+    <div class="timer" aria-live="polite">
+      <div class="timebox"><strong id="days">--</strong><span>Days</span></div>
+      <div class="timebox"><strong id="hours">--</strong><span>Hours</span></div>
+      <div class="timebox"><strong id="minutes">--</strong><span>Minutes</span></div>
+      <div class="timebox"><strong id="seconds">--</strong><span>Seconds</span></div>
+    </div>
+    <p id="timerNote" class="small">Choose the date to start the countdown 💗</p>
+  </div>
+</section>
+<section id="memories">
+  <h2 class="section-title">Our little memories 📸</h2>
+  <p class="section-sub">Tap any frame to add a photo from your phone. Photos stay in this page while it is open; to publish them for her, add image files to the website folder as described in README.</p>
+  <div class="gallery">
+    <label class="photo"><input type="file" accept="image/*" aria-label="Add memory photo one" onchange="previewPhoto(this)"><span class="placeholder">💞<br><b>Our favourite memory</b><br>Tap to add photo</span></label>
+    <label class="photo"><input type="file" accept="image/*" aria-label="Add memory photo two" onchange="previewPhoto(this)"><span class="placeholder">🌷<br><b>Your beautiful smile</b><br>Tap to add photo</span></label>
+    <label class="photo"><input type="file" accept="image/*" aria-label="Add memory photo three" onchange="previewPhoto(this)"><span class="placeholder">✨<br><b>A moment to remember</b><br>Tap to add photo</span></label>
+  </div>
+</section>
+<section id="letter-section">
+  <h2 class="section-title">A little letter for you 💖</h2>
+  <p class="section-sub">From my heart to yours.</p>
+  <article class="card letter">
+    Meri pyaari Baccha, 💗
+
+    Happy Birthday, meri favourite person! 🥹❤️
+
+    Tum meri life ki un special wajah mein se ho jo normal se din ko bhi beautiful bana deti hain. Tumhari smile hamesha aise hi bani rahe, tumhare saare dreams poore hon, aur tumhe life mein dher saara pyaar, sukoon aur happiness mile.
+
+    Main chahta hoon ki tum hamesha apni value yaad rakho — tum special ho, tum important ho, aur tumhari khushi matter karti hai. Chahe aaj kitni bhi wishes milen, meri wish simple hai: tum har din dil se khush raho. 🫶
+
+    Aaj cake khao, lots of pictures lo, khoob smile karo aur apne special day ko enjoy karo. This page is a small surprise to remind you how loved and appreciated you are.
+
+    <b>Happy Birthday once again, Baccha! 🎂🌷</b>
+    <div class="sign">Always sending you love, 💌</div>
+  </article>
+</section>
+<section style="text-align:center;padding-top:10px">
+  <div class="card">
+    <div style="font-size:2.5rem">💗 🎀 💗</div>
+    <h2 class="section-title" style="font-size:2.2rem;margin-top:12px">One last little surprise</h2>
+    <p class="section-sub" style="margin-bottom:22px">Ready for a sky full of hearts?</p>
+    <button class="btn" onclick="celebrate(true)">Yes, surprise me! 🎉</button>
+  </div>
+</section>
+</main>
+<footer>Made with ♡ for Baccha · Every little detail is a reminder that you matter.</footer>
+<audio id="music" loop preload="none"></audio>
+<script>
+function openSurprise(){document.getElementById('card-section').scrollIntoView({behavior:'smooth'});celebrate()}
+function celebrate(big=false){
+  const emojis=['💗','💕','💖','💘','🌸','✨'];
+  for(let i=0;i<(big?55:22);i++){
+    const el=document.createElement('span');el.className=big?'confetti':'heart';
+    if(big){el.style.left=Math.random()*100+'vw';el.style.background=['#ff5e96','#ffd166','#e88bb5','#fff'][i%4];el.style.borderRadius='2px';el.style.animationDelay=Math.random()*.8+'s'}
+    else{el.textContent=emojis[Math.floor(Math.random()*emojis.length)];el.style.left=Math.random()*100+'vw';el.style.fontSize=(18+Math.random()*22)+'px';el.style.animationDelay=Math.random()*1.2+'s'}
+    document.body.appendChild(el);setTimeout(()=>el.remove(),big?4000:5500);
+  }
+}
+function previewPhoto(input){
+  if(!input.files||!input.files[0])return;
+  const box=input.closest('.photo');let img=box.querySelector('img');
+  if(!img){img=document.createElement('img');box.appendChild(img)}
+  img.src=URL.createObjectURL(input.files[0]);const placeholder=box.querySelector('.placeholder');if(placeholder)placeholder.classList.add('hidden');
+}
+const dateInput=document.getElementById('birthdayDate');
+const saved=localStorage.getItem('bacchaBirthdayDate');if(saved)dateInput.value=saved;
+dateInput.addEventListener('change',()=>{localStorage.setItem('bacchaBirthdayDate',dateInput.value);updateTimer()});
+function updateTimer(){
+ const note=document.getElementById('timerNote');if(!dateInput.value){note.textContent='Choose the date to start the countdown 💗';return}
+ const parts=dateInput.value.split('-').map(Number);const now=new Date();let target=new Date(parts[0],parts[1]-1,parts[2],0,0,0);
+ if(target.toDateString()===now.toDateString()){note.textContent='It’s your birthday, Baccha! Happy Birthday! 🎂💗';['days','hours','minutes','seconds'].forEach(id=>document.getElementById(id).textContent='0');return}
+ if(target<now)target.setFullYear(target.getFullYear()+1);
+ let diff=Math.max(0,target-now);const d=Math.floor(diff/86400000);diff%=86400000;const h=Math.floor(diff/3600000);diff%=3600000;const m=Math.floor(diff/60000);const s=Math.floor(diff%60000/1000);
+ document.getElementById('days').textContent=d;document.getElementById('hours').textContent=h;document.getElementById('minutes').textContent=m;document.getElementById('seconds').textContent=s;
+ note.textContent='Every second brings us closer to your special day 💕';
+}
+setInterval(updateTimer,1000);updateTimer();
+// Browsers require a real audio file before music can play. Add music.mp3 to the folder.
+async function toggleMusic(){
+ const audio=document.getElementById('music'),btn=document.getElementById('musicBtn');
+ if(!audio.src){audio.src='music.mp3';audio.load()}
+ if(audio.paused){try{await audio.play();btn.textContent='Pause music ♫'}catch(e){alert('Add a music.mp3 file to the website folder first. Use a song you have permission to share, then refresh the page.')}}else{audio.pause();btn.textContent='Play our music ♫'}
+}
+</script>
+</body>
+</html>
